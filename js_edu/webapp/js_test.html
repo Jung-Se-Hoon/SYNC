@@ -1,0 +1,52 @@
+<html>
+    <title>
+        Javascript Test
+    </title>
+    <script langauge="Javascript">
+        function check_val()
+        {
+            var a = frm.input_val1.value,
+                b = frm.input_val2.value,
+                c = frm.input_val3.value,
+                d = "";
+
+            d = ( ( (parseInt(a) + parseInt(b) ) * parseInt(c) ) / 2);
+            frm.output_val.value = d;
+        }
+    </script>
+    <body>
+        <form name="frm">
+        <h1>자바스크립트 테스트</h1>
+        <font size="20" style="font-style: italic;"><b>5기 5반입니다.</b></font>
+        <table border="2" width="500px" height="20px" bordercolor="skyblue">
+            <tr>
+                <td>A 값</td>
+                </td>
+                <td>
+                    <input name="input_val1" type="text" width="30"/>
+                </td>
+            </tr>
+            <tr>
+                <td>B 값</td>
+                <td>
+                    <input name="input_val2" type="text" width="30"/>
+                </td>
+            </tr>
+            <tr>
+                <td>C 값</td>
+                <td>
+                    <input name="input_val3" type="text" width="30"/>
+                </td>
+            </tr>
+            <tr>
+                <td>D = ((A + B) * C) / 2</td>
+                <td>
+                    <input name="output_val" type="text" width="30"/>
+                </td>
+            </tr>
+        </table>
+    </br>
+        <input type="button" value="확인" onclick="check_val()"/>
+        </form>
+    </body>
+</html>

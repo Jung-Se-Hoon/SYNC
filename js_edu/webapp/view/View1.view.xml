@@ -1,0 +1,19 @@
+<mvc:View controllerName="js.edu.jsedu.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <!-- <Text text="SYNC Class 5!!" width="20em"  textAlign="Center"/>
+    <Text text="정세훈" width="20em" textAlign="Begin"/>
+    <Label text="SYNC Class 5 Fiori 수업" width="500px" design="Bold"/> -->
+
+    <!-- <Button text="눌러" press=".onMsg"   />
+    <Button text="너의 이름은?" press=".onName"  icon="sap-icon://travel-itinerary"/>
+    <Button text="또 다른 메세지" press=".onMsg2" icon="sap-icon://biometric-face" />  -->
+
+    <Text text="SYNC5 Fiori Text" width="200px" textAlign="Center" />
+    <Label text="Class 5 Fighting" width="20rem" design="Bold" />
+    <Button text="Airline" icon="sap-icon://travel-itinerary" enabled="false"/>
+    <Button text="Bell" press=".onTest1" icon="sap-icon://bell" width="100px" />
+    <Button text="Setting" press=".onTest2" icon="sap-icon://action-settings" width="30em"/>
+
+</mvc:View>
