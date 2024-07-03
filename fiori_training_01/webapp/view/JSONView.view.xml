@@ -1,0 +1,29 @@
+<mvc:View controllerName="sync5.cl5.fioritraining01.controller.JSONView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <!-- <VBox >
+        <Input value="{/InputSet/name}"
+               width="{/InputSet/width}" 
+               description="{/InputSet/desc}" 
+               valueLiveUpdate="{/InputSet/update}"/>
+
+        <Text text="{/TextSet/text}"
+
+              width="{/TextSet/width}" />
+        <Button text="{/ButtonSet/btn_text}" />
+    </VBox> -->
+
+    <VBox >
+        <Input value="{/Input1Set/name}"
+               description="{/Input1Set/desc}"
+               width="{/Input1set/width}" />
+
+        <Input value="{In1>/Input2Set/name}"
+               description="{In1>/Input2Set/desc}"
+               width="{In1>/Input2Set/width}" />
+
+        <Label text="{RSM>LableText}" design="{In2>/LableSet/desgin}"/>
+
+        <Button text="{RSM>ButtonTitle}" />
+    </VBox>
+</mvc:View>

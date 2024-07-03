@@ -10,26 +10,26 @@ function (Controller, Text, MessageToast) {
 
         onInit: function () 
         {
-        //     new Text({
-        //         text: "SYNC",
-        //         textAlign: "Center"
-        // }).placeeAt("content");
+            new Text({
+                text: "SYNC",
+                textAlign: "Center" 
+        }).placeeAt("content");
         },
 
-        // onMsg: function ()
-        // {
-        //     alert("눌렀냐?");
-        // },
+        onMsg: function ()
+        {
+            alert("눌렀냐?");
+        },
 
-        // onName: function () 
-        // {
-        //     alert("정세훈");    
-        // },
+        onName: function () 
+        {
+            alert("정세훈");    
+        },
 
-        // onMsg2: function ()
-        // {
-        //    MessageToast.show("졸려");
-        // }
+        onMsg2: function ()
+        {
+           MessageToast.show("졸려");
+        },
 
         onTest1: function () 
         {
