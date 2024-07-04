@@ -1,0 +1,9 @@
+{
+  "gs_data":
+  {
+      "value": "입력필드",
+      "desc": "Input Field",
+      "width": "30rem",
+      "showClear": true
+  }
+}

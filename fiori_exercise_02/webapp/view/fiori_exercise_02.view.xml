@@ -1,0 +1,13 @@
+<mvc:View controllerName="fioriexercise02.fioriexercise02.controller.fiori_exercise_02"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+        <VBox>
+        <Input value="{/gs_data/value}"
+               description="{/gs_data/desc}"
+               width="{/gs_data/width}"
+               showClearIcon="{/gs_data/showClear}" 
+        />
+        <Button text="값 읽기" press="showValue('width', 'desc')" />
+        </VBox>
+
+</mvc:View>

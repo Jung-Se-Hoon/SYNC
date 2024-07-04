@@ -1,0 +1,61 @@
+<mvc:View controllerName="sync5.cl5.fioritraining03.controller.Training3View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>pageTitle}">
+    <!-- <VBox>
+        <HBox>
+            <Label text="A =" width="150px"  />
+            <Input id="input_val1" width="100px" showClearIcon="true" />
+        </HBox>
+        <HBox>
+            <Label text="B =" width="150px"  />
+            <Input id="input_val2" width="100px" showClearIcon="true" />
+        </HBox>
+        <HBox>
+            <Label text="C =" width="150px"  />
+            <Input id="input_val3" width="100px" showClearIcon="true" />
+        </HBox>
+        <HBox>
+            <Label text="D = ((A + B) * C) / 2 =" width="150px"  />
+            <Input id="output_val" width="100px" showClearIcon="true" />
+        </HBox>
+        <HBox>
+        <Button text="게산" icon="sap-icon://simulate" press="goCalc" />
+        <Button text="Clear" press="goClear" />
+        </HBox>
+    </VBox> -->
+
+    <VBox >
+        <HBox >
+            <Label text="가로길이" width="100px" />
+            <Input id="width_leng" width="100px" />
+        </HBox>
+        <HBox >
+            <Label text="세로길이" width="100px" />
+            <Input id="height_leng" width="100px" />
+        </HBox>
+        <HBox >
+            <Label text="면적" width="100px" />
+            <Input id="area" width="100px" />
+        </HBox>
+        <Button text="계산" press="square" />
+    </VBox>
+    
+    <VBox>
+        <HBox>
+            <Label text="원 가격" width="100px" />
+            <Input id="price" description="원" />
+        </HBox>
+        <HBox>
+            <Label text="할인율" width="100px" />
+            <Input id="discount" description="%" />
+        </HBox>
+        <HBox>
+            <Label text="할인된 가격" width="100px" />
+            <Input id="discount_price" description="원" />
+        </HBox>
+        <Button text="계산" press="calc" />
+    </VBox>
+
+    </Page>
+</mvc:View>
