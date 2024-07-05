@@ -2,10 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
         <VBox>
-        <Input value="{/gs_data/value}"
-               description="{/gs_data/desc}"
-               width="{/gs_data/width}"
-               showClearIcon="{/gs_data/showClear}" 
+        <Input value="{/gs_data3/value}"
+               description="{/gs_data3/desc}"
+               width="{/gs_data3/width}"
+               showClearIcon="{/gs_data3/showClear}" 
         />
         <Button text="값 읽기" press="showValue('width', 'desc')" />
         </VBox>

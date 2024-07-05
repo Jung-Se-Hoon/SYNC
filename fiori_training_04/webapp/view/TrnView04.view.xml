@@ -1,0 +1,29 @@
+<mvc:View controllerName="sync5.cl5.fioritraining04.controller.TrnView04"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <VBox >
+        <Button text="확인" press="onPress"/>
+        <Button text="Itab 확인" press="onItabPress"/>
+        <Button text="test" press="test"/>
+        <Button text="IF 확인" press="if_check" />
+        <Button text="IF 체크" press="if_check_2" />
+        <HBox>
+            <Label text="City" />
+            <Input id="city_name" />
+        </HBox>
+        <Button text="switch 체크" press="switch_check" />
+        <HBox>
+            <Label text="1st Number" />
+            <Input id="number_one" />
+            <Label text="2nd Number" />
+            <Input id="number_two" />
+        </HBox>
+        <Button text="크기비교" press="compare_number" />
+        <HBox>
+            <Label text="Number" />
+            <Input id="array" />
+        </HBox>
+        <Button text="입력 체크" press="input_check" />
+    </VBox>
+</mvc:View>

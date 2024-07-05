@@ -1,0 +1,27 @@
+<mvc:View controllerName="practice01.controller.Practice_01"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <VBox >
+        <HBox >
+            <Label text="가로길이" />
+            <Input id="width" />
+        </HBox>
+        <HBox >
+            <Label text="세로길이" />
+            <Input id="height" />
+        </HBox>
+        <HBox >
+            <Label text="면적" />
+            <Input id="area" />
+        </HBox>
+        <Button text="계산" press="square" />
+    </VBox>
+
+    <VBox >
+        <HBox >
+            
+        </HBox>
+    </VBox>
+
+</mvc:View>

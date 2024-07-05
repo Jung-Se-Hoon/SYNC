@@ -24,11 +24,11 @@
         <Button text="Clear" press="goClear" />
         </HBox>
     </VBox> -->
-
+    <Panel headerText="{i18n>panelTitle}"/>
     <VBox >
         <HBox >
             <Label text="가로길이" width="100px" />
-            <Input id="width_leng" width="100px" />
+            <Input id="width_leng" width="100px" showClearIcon="true" />
         </HBox>
         <HBox >
             <Label text="세로길이" width="100px" />
