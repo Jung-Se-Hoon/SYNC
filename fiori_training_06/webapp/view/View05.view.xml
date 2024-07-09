@@ -1,0 +1,17 @@
+<mvc:View controllerName="sync5.cl5.fioritraining06.controller.View05"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <VBox tooltip="학생정보 체크" >
+        <HBox >
+            <Label text="User ID" width="100px" />
+            <Input id="Id" width="100px" />
+        </HBox >
+        <HBox >
+            <Label text="PW" width="100px" />
+            <Input id="Pw" width="100px" type="Password" />
+        </HBox >
+        <Button text="로그인" press="Login" />
+    </VBox>
+
+</mvc:View>

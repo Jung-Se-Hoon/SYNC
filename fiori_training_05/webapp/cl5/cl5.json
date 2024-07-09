@@ -1,0 +1,20 @@
+{
+    "input1":
+    {
+        "value": "Production Plan",
+        "description": "PP 모듈",
+        "width": "300px"
+    },
+    "input2":
+    {
+        "value": "Controlling",
+        "description": "CO 모듈",
+        "width": "300px"
+    },
+    "input3":
+    {
+        "value": "Human Resource",
+        "description": "HR 모듈",
+        "width": "300px"
+    }
+}

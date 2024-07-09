@@ -1,0 +1,26 @@
+<mvc:View controllerName="sync5.cl5.fioritraining05.controller.View04"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <!-- <VBox>
+        <Button text="구구단 출력" press="gugudan" />
+        <HBox >
+            <Label text="단 입력" width="5rem" textAlign="Begin" />
+            <Input id="dan" width="100px" showClearIcon="true" />
+        </HBox>
+        <Button text="N단 출력" press="gugudan_n" />
+    </VBox> -->
+    <!-- <VBox >
+        <Label text="{/LabelSet/text}" design="{/LabelSet/design}" width="{/LabelSet/width}" />
+        <Text text="{Text>/TextSet/text}" width="{Text>/TextSet/width}" textAlign="{Text>/TextSet/textAlign}" />
+        <Button text="{Button>/ButtonSet/text}" icon="{Button>/ButtonSet/icon}" />
+    </VBox> -->
+
+    <Panel headerText="UI5 패널" width="500px" height="400px" >
+    <Input value="{/input1/value}" description="{/input1/description}" width="{/input1/width}"  />
+    <Input value="{/input2/value}" description="{/input2/description}" width="{/input2/width}"  />
+    <Input value="{/input3/value}" description="{/input3/description}" width="{/input3/width}"  />
+
+
+    </Panel>
+</mvc:View>

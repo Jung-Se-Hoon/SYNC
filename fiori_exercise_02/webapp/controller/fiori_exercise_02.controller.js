@@ -37,11 +37,11 @@ function (Controller, JSONModel) {
             //  this.getView().setModel(oModel4, 'IN3');
            
         },
-        showValue: function (pName1, pName2)
-                {
-                    alert(this.getView().getModel().getProperty("/gs_data/" + pName1));
-                    alert(this.getView().getModel().getProperty("/gs_data/" + pName2));
-                },
+        // showValue: function (pName1, pName2)
+        //         {
+        //             alert(this.getView().getModel().getProperty("/gs_data/" + pName1));
+        //             alert(this.getView().getModel().getProperty("/gs_data/" + pName2));
+        //         },
 
                 
     });

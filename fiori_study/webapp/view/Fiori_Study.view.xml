@@ -1,8 +1,8 @@
 <mvc:View controllerName="practice01.controller.Practice_01"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <VBox>
+    
     <Label text="{/gs/text}"  design="{RSM>textAlign}" />
     <Text text="{RSM>text}" textAlign="{/gs/textAlign}"  />
-    </VBox>
+
 </mvc:View>
