@@ -1,14 +1,14 @@
 {
-    "data1": 
+    "data1":
     {
         "value": "안녕",
         "description": "하세요",
-        "showclearIcon": true
+        "showClearIcon": true
     },
     "data2":
     {
         "text": "good",
         "width": "150px",
-        "enalbed": true
+        "enabled": false
     }
 }
