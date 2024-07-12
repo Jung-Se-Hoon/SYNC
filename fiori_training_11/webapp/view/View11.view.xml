@@ -1,0 +1,58 @@
+<mvc:View controllerName="sync5.cl5.fioritraining11.controller.View11"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.suite.ui.microchart" >
+
+    <VBox width="500px" >
+    <HBox >
+        <m:InteractiveBarChart labelWidth="25%" displayedBars="10">
+			<m:bars>
+				<m:InteractiveBarChartBar label="제품 1" value="30"/>
+				<m:InteractiveBarChartBar label="제품 2" value="20"/>
+				<m:InteractiveBarChartBar label="제품 3" value="50"/>
+			</m:bars>
+		</m:InteractiveBarChart>
+
+        
+
+        <!-- 아래 차트는 model 사용 -->
+        <m:InteractiveBarChart labelWidth="200px" displayedBars="10"
+            bars="{/AirlineSet}" >
+			<m:bars>
+				<m:InteractiveBarChartBar label="{Carrid}" value="{Seats}"/>
+			</m:bars>
+		</m:InteractiveBarChart>
+        </HBox>
+    </VBox>
+
+    <VBox width="500px" >
+    <HBox >
+    <FlexBox width="20rem" height="15rem" alignItems="Center" class="sapUiSmallMargin">
+			<items>
+				<m:InteractiveLineChart selectionChanged="selectionChanged" press="press" precedingPoint="15"
+									  succeedingPoint="89">
+					<m:points>
+						<m:InteractiveLineChartPoint value="33.1" label="May" secondaryLabel="Q2"/>
+						<m:InteractiveLineChartPoint value="12" label="June"/>
+						<m:InteractiveLineChartPoint value="51.4" label="July" secondaryLabel="Q3"/>
+						<m:InteractiveLineChartPoint value="52" label="Aug"/>
+						<m:InteractiveLineChartPoint value="69.9" label="Sep"/>
+						<m:InteractiveLineChartPoint value="0.9" label="Oct" secondaryLabel="Q4"/>
+					</m:points>
+				</m:InteractiveLineChart>
+			</items>
+		</FlexBox>
+
+
+			<m:InteractiveDonutChart selectionChanged="onSelectionChanged" >
+				<m:segments>
+					<m:InteractiveDonutChartSegment label="Implementation Phase" value="40.0" displayedValue="40.0%"/>
+					<m:InteractiveDonutChartSegment label="Design Phase" value="21.5" displayedValue="21.5%"/>
+					<m:InteractiveDonutChartSegment label="Test Phase" value="38.5" displayedValue="38.5%"/>
+				</m:segments>
+			</m:InteractiveDonutChart>
+     </HBox>
+    </VBox>
+</mvc:View>

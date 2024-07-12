@@ -1,0 +1,61 @@
+<mvc:View controllerName="sync5.cl5.fioritraining09.controller.View09"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core">
+
+        <t:Table
+			rows="{/gt_data}"
+			selectionMode="None"
+			selectionBehavior="Row"
+			paste="onPaste"
+			ariaLabelledBy="title">
+			<t:extension>
+				<OverflowToolbar style="Clear">
+					<Title id="title" text="Airline List"/>
+				</OverflowToolbar>
+			</t:extension>
+			<t:columns>
+				<t:Column width="5rem">
+					<Label text="Airline" />
+					<t:template>
+						<!-- <Text text="{Carrid}" wrapping="false" /> -->
+                        <ObjectStatus text="{Carrid}" state="{
+								path: 'Available',
+								formatter: '.formatAvailableToObjectState'
+							}"/>
+					</t:template>
+				</t:Column>				
+            </t:columns>
+            <t:columns>
+				<t:Column width="11rem">
+					<Label text="Airline Name" />
+					<t:template>
+						<Input value="{Carrname}" />
+						<!-- <Text text="{Carrname}" wrapping="false" /> -->
+					</t:template>
+				</t:Column>				
+            </t:columns>
+            <t:columns>
+				<t:Column width="8rem">
+					<Label text="Price" />
+					<t:template>
+						<!-- <Text text="{price}" wrapping="false" /> -->
+                        <u:Currency  value="{price}" currency="{Currcode}" />
+					</t:template>
+				</t:Column>				
+            </t:columns>
+            <t:columns>
+				<t:Column width="8rem">
+					<Label text="Currency" />
+					<t:template>
+						<Text text="{Currcode}" wrapping="false" />
+					</t:template>
+				</t:Column>				
+            </t:columns>
+            
+		</t:Table>
+
+</mvc:View>

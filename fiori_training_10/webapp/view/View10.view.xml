@@ -1,0 +1,77 @@
+<mvc:View controllerName="sync5.cl5.fioritraining10.controller.View10"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core" >
+
+    
+			<t:Table 
+				rows="{/data}"
+				selectionMode="MultiToggle"
+                selectionBehavior="Row"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<t:extension>
+					<OverflowToolbar style="Clear">
+						<Title id="title" text="Products"/>
+					</OverflowToolbar>
+				</t:extension>
+				<t:columns>
+					<t:Column width="11rem">
+						<Label text="Material" />
+						<t:template>
+							<Text text="{Matnr}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Plant" />
+						<t:template>
+							<Text text="{Werks}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Material Type" />
+						<t:template>
+							<Input value="{Mtart}" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Sales Document" />
+						<t:template>
+							<Text text="{VBELN}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Sales Item" />
+						<t:template>
+							<Text text="{VBELP}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Price" />
+						<t:template>
+							<u:Currency value="{PRICE}" currency="{CURRENCY}" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+                <t:columns>
+					<t:Column width="11rem">
+						<Label text="Currency" />
+						<t:template>
+							<Text text="{CURRENCY}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+			</t:Table>
+</mvc:View>
