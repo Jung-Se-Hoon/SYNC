@@ -26,7 +26,26 @@ function (Controller, JSONModel) {
                     { Carrid: "Delta", Seats: 107},
                     { Carrid: "Qatar", Seats: 250},
                     { Carrid: "Canada", Seats: 325},
+                ],
+
+                
+                segments: 
+                [
+                    { label: "Implementation Phase", value: 40.0, displayedValue: "40.0%" },
+                    { label: "Design Phase", value: 21.5, displayedValue: "21.5%" },
+                    { label: "Test Phase", value: 38.5, displayedValue: "38.5%" }
+                ],
+
+                points: 
+                [
+                    { value: 33.1, label: "May", "secondaryLabel": "Q2" },
+                    { value: 12, label: "June" },
+                    { value: 51.4, label: "July", "secondaryLabel": "Q3" },
+                    { value: 52, label: "Aug" },
+                    { value: 69.9, label: "Sep" },
+                    { value: 0.9, label: "Oct", "secondaryLabel": "Q4" }
                 ]
+                
             };
 
             let oModel = new JSONModel(oData);

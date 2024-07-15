@@ -1,7 +1,16 @@
 <mvc:View controllerName="practice01.controller.Practice_01"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:m="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core" >
     
-    <Button text="Data체크" press="data_check" />
-
+	<VBox >
+		<HBox >
+			<Label text="메시지" />
+			<Input id="msg" width="50rem" />
+		</HBox>
+		<Text text="" width="300px" id="copy" />
+		<Button text="Msg Dispaly" press="display_msg" />
+	</VBox>
 </mvc:View>

@@ -32,25 +32,21 @@
     <FlexBox width="20rem" height="15rem" alignItems="Center" class="sapUiSmallMargin">
 			<items>
 				<m:InteractiveLineChart selectionChanged="selectionChanged" press="press" precedingPoint="15"
-									  succeedingPoint="89">
+									  succeedingPoint="89" points="{/points}" >
 					<m:points>
-						<m:InteractiveLineChartPoint value="33.1" label="May" secondaryLabel="Q2"/>
-						<m:InteractiveLineChartPoint value="12" label="June"/>
-						<m:InteractiveLineChartPoint value="51.4" label="July" secondaryLabel="Q3"/>
-						<m:InteractiveLineChartPoint value="52" label="Aug"/>
-						<m:InteractiveLineChartPoint value="69.9" label="Sep"/>
-						<m:InteractiveLineChartPoint value="0.9" label="Oct" secondaryLabel="Q4"/>
+						<m:InteractiveLineChartPoint value="{value}" label="{label}" secondaryLabel="{secondaryLabel}"/>
 					</m:points>
 				</m:InteractiveLineChart>
 			</items>
 		</FlexBox>
 
 
-			<m:InteractiveDonutChart selectionChanged="onSelectionChanged" >
+			<m:InteractiveDonutChart selectionChanged="onSelectionChanged" segments="{/segments}" >
 				<m:segments>
-					<m:InteractiveDonutChartSegment label="Implementation Phase" value="40.0" displayedValue="40.0%"/>
+					<!-- <m:InteractiveDonutChartSegment label="Implementation Phase" value="40.0" displayedValue="40.0%"/>
 					<m:InteractiveDonutChartSegment label="Design Phase" value="21.5" displayedValue="21.5%"/>
-					<m:InteractiveDonutChartSegment label="Test Phase" value="38.5" displayedValue="38.5%"/>
+					<m:InteractiveDonutChartSegment label="Test Phase" value="38.5" displayedValue="38.5%"/> -->
+					<m:InteractiveDonutChartSegment label="{label}" value="{value}" displayedValue="{displayedValue}"/>
 				</m:segments>
 			</m:InteractiveDonutChart>
      </HBox>

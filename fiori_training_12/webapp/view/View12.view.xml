@@ -1,0 +1,177 @@
+<mvc:View controllerName="sync5.cl5.fioritraining12.controller.View12"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" >
+
+    <!-- View의 컨트롤러를 지정하고, SAPUI5 네임스페이스들을 선언합니다 -->
+
+    <!-- HBox를 사용하여 레이아웃을 정의합니다 -->
+    <HBox>
+
+        <!-- Pie 차트 -->
+        <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='300px' width="550px" vizType='pie'  
+                vizProperties="{title: {text: '자재별 재고량'}, plotArea: { drawingEffect: 'glossy'} }">
+
+            <!-- Pie 차트의 데이터셋 설정 -->
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/MatnrSet}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Material"
+                            value="{Matnr}" />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition name="Stock Qty"
+                            value="{Stock}" />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+
+            <!-- Pie 차트의 피드 설정 -->
+            <viz:feeds>
+                <viz.feeds:FeedItem uid="size" type="Measure"
+                    values="Stock Qty" />
+                <viz.feeds:FeedItem uid="color" type="Dimension"
+                    values="Material" />
+            </viz:feeds>
+
+            <!-- 팝오버를 추가하여 추가 정보를 표시할 수 있도록 합니다 -->
+            <viz:dependents>
+                <viz:Popover id="idPopOver"></viz:Popover>
+            </viz:dependents>
+        </viz:VizFrame>
+
+
+        <!-- Column 차트 -->
+        <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}"
+                height='300px' width="550px" vizType='column'  
+                vizProperties="{title: {text: '자재별 재고량2'}, plotArea: { drawingEffect: 'glossy'} }">
+
+            <!-- Column 차트의 데이터셋 설정 -->
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/MatnrSet}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Material"
+                            value="{Matnr}" />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition name="Stock Qty"
+                            value="{Stock}" />
+                        <viz.data:MeasureDefinition name="Stock Price"
+                            value="{Price}" />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+
+            <!-- Column 차트의 피드 설정 -->
+            <viz:feeds>
+                <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                    values="Stock Qty" />
+                <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                    values="Material" />
+                <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                    values="Stock Price" />
+            </viz:feeds>
+
+            <!-- 팝오버를 추가하여 추가 정보를 표시할 수 있도록 합니다 -->
+            <viz:dependents>
+                <viz:Popover id="idPopOver2"></viz:Popover>
+            </viz:dependents>
+        </viz:VizFrame>
+
+    </HBox>
+
+
+    <!-- Line 차트 -->
+    <HBox>
+        <viz:VizFrame id="idVizFrame3" uiConfig="{applicationSet:'fiori'}"
+                height='300px' width="550px" vizType='line'  
+                vizProperties="{title: {text: '자재별 재고량3'}, plotArea: { drawingEffect: 'glossy'} }">
+
+            <!-- Line 차트의 데이터셋 설정 -->
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/MatnrSet}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Material"
+                            value="{Matnr}" />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition name="Stock Qty"
+                            value="{Stock}" />
+                        <viz.data:MeasureDefinition name="Stock Price"
+                            value="{Price}" />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+
+            <!-- Line 차트의 피드 설정 -->
+            <viz:feeds>
+                <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                    values="Stock Qty" />
+                <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                    values="Stock Price" />
+                <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                    values="Material" />
+            </viz:feeds>
+
+            <!-- 팝오버를 추가하여 추가 정보를 표시할 수 있도록 합니다 -->
+            <viz:dependents>
+                <viz:Popover id="idPopOver3"></viz:Popover>
+            </viz:dependents>
+        </viz:VizFrame>
+
+
+
+    <!-- Radar 차트 -->
+    <viz:VizFrame id="idVizFrame4" uiConfig="{applicationSet:'fiori'}"
+            height='300px' width="550px" vizType='radar'  
+            vizProperties="{title: {text: '자재별 재고량4'}, plotArea: { drawingEffect: 'glossy'} }">
+
+        <!-- Radar 차트의 데이터셋 설정 -->
+        <viz:dataset>
+            <viz.data:FlattenedDataset data="{/MatnrSet}">
+                <viz.data:dimensions>
+                    <viz.data:DimensionDefinition name="Material"
+                        value="{Matnr}" />
+                </viz.data:dimensions>
+                <viz.data:measures>
+                    <viz.data:MeasureDefinition name="Stock Qty"
+                        value="{Stock}" />
+                    <viz.data:MeasureDefinition name="Stock Price"
+                        value="{Price}" />
+                </viz.data:measures>
+            </viz.data:FlattenedDataset>
+        </viz:dataset>
+
+        <!-- Radar 차트의 피드 설정 -->
+        <viz:feeds>
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                values="Stock Qty" />
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                values="Stock Price" />
+            <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                values="Material" />
+        </viz:feeds>
+
+        <!-- 팝오버를 추가하여 추가 정보를 표시할 수 있도록 합니다 -->
+        <viz:dependents>
+            <viz:Popover id="idPopOver4"></viz:Popover>
+        </viz:dependents>
+    </viz:VizFrame>
+    </HBox>
+
+    <!-- 각 차트의 가시성을 제어하기 위한 버튼들 -->
+    <Button text=" 1번 차트 보이기" press="show1" />
+    <Button text=" 1번 차트 숨기기" press="noshow1" />
+    <Button text=" 2번 차트 보이기" press="show2" />
+    <Button text=" 2번 차트 숨기기" press="noshow2" />
+    <Button text=" 3번 차트 보이기" press="show3" />
+    <Button text=" 3번 차트 숨기기" press="noshow3" />
+    <Button text=" 4번 차트 보이기" press="show4" />
+    <Button text=" 4번 차트 숨기기" press="noshow4" />
+    <Button text=" 전체 차트 보이기" press="show5" />
+    <Button text=" 전체 차트 숨기기" press="noshow5" />
+
+</mvc:View>

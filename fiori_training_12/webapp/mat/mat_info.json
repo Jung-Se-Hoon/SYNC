@@ -1,0 +1,10 @@
+{
+    "MatnrSet":
+                {
+                    "data1":{ "Matnr": "RPC_0001", "Stock": 250, "Price": 1000 },
+                    "data2":{ "Matnr": "RPC_0002", "Stock": 325, "Price": 1200 },
+                    "data3":{ "Matnr": "RPC_0003", "Stock": 512, "Price": 1450 },
+                    "data4":{ "Matnr": "RPC_0004", "Stock": 430, "Price": 1600 },
+                    "data5":{ "Matnr": "RPC_0005", "Stock": 120, "Price": 1125 }
+                }
+}
