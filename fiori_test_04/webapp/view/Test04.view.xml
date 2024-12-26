@@ -1,0 +1,27 @@
+<mvc:View controllerName="sync5.cl5.fioritest04.controller.Test04"
+    xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true"
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.suite.ui.microchart" >
+    <!-- Interactive Chart를 사용하기 위해 사용하는 여러가지 네임스페이스들 -->
+
+
+	<!-- ** 15번 문제 **  -->
+    <HBox width="500px" >
+		<Label text="15번 문제" design="Bold" />
+		<!-- bar차트 코드이다. 데이터는 jsonModel에서 가져온다. -->
+    	<m:InteractiveBarChart  displayedBars="10" bars="{/popul}" >
+			<m:bars>
+				<m:InteractiveBarChartBar label="{Year}" value="{home}"/>
+			</m:bars>
+		</m:InteractiveBarChart>
+		<!-- line차트 코드이다. 데이터는 jsonModel에서 가져온다. -->
+        <m:InteractiveLineChart selectionChanged="selectionChanged" press="press" precedingPoint="15" succeedingPoint="89" points="{/born}" >
+			<m:points>
+				<m:InteractiveLineChartPoint label="{Year}" value="{Birth}" />
+			</m:points>
+		</m:InteractiveLineChart>
+    </HBox>
+
+</mvc:View>

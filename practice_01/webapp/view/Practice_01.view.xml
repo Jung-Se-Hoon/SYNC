@@ -1,9 +1,6 @@
 <mvc:View controllerName="practice01.controller.Practice_01"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
-    xmlns:m="sap.ui.table"
-	xmlns:u="sap.ui.unified"
-	xmlns:c="sap.ui.core" >
+    xmlns="sap.m" >
     
 	<VBox >
 		<HBox >

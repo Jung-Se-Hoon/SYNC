@@ -6,10 +6,5 @@
         <Text text="{/InputData1/text}" 
               width="{RSM>width}" 
               textAlign="{/InputData1/textAlign}" /> 
-        <Label text="{In1>/InputData2/text}" 
-               design="{RSM>design}" />
-        <Input value="{RSM>address}" 
-               width="{RSM>width2}" 
-               description="{RSM>description}" />
     </VBox>
 </mvc:View>

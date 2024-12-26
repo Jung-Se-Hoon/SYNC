@@ -1,0 +1,100 @@
+<mvc:View controllerName="sync5.cl5.fioritest05.controller.Test05"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:layout="sap.ui.layout"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" >
+    <!-- VizFrame을 사용하기 위해 사용하는 여러가지 네임스페이스들 -->
+
+	<!-- ** 16번 문제 ** -->
+
+	<VBox >
+        <Label text="16번 문제" design="Bold" />
+    	<HBox >
+			<!-- Pie 차트 -->
+			<!-- 차트의 유형, 차트의 제목, 그림자 체도 등 설정 -->
+    		<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='300px' width="550px" vizType='pie' 
+						  vizProperties="{title: {text: 'Pie 차트'}, plotArea: { drawingEffect: 'glossy'} }">
+            <!-- Pie 차트의 데이터셋 설정 -->
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/GirdSet}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Company code" value="{Bukrs}" />
+                    </viz.data:dimensions>
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Fiscal year" value="{Gjahr}" />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition name="Asset total" value="{Anln1}" />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <!-- Pie 차트의 피드 설정 (차트별로 피드가 다르므로 잘 학인 해야함) -->
+            <viz:feeds>
+                <viz.feeds:FeedItem uid="size" type="Measure" values="Asset total" />
+                <viz.feeds:FeedItem uid="color" type="Dimension" values="Fiscal year" />
+                <viz.feeds:FeedItem uid="color" type="Dimension" values="Company code" />
+            </viz:feeds>
+            <!-- 팝오버를 추가하여 추가 정보를 표시할 수 있도록 합니다 -->
+            <viz:dependents>
+                <viz:Popover id="idPopOver"></viz:Popover>
+            </viz:dependents>
+        	</viz:VizFrame>
+
+        	<!-- Column 차트 -->
+			<!-- 차트의 유형, 차트의 제목, 그림자 체도 등 설정 -->
+        	<viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" height='300px' width="550px" vizType='column'  
+            	    	  vizProperties="{title: {text: 'Column 차트'}, plotArea: { drawingEffect: 'glossy'} }">
+            	<!-- Column 차트의 데이터셋 설정 -->
+            	<viz:dataset>
+	                <viz.data:FlattenedDataset data="{/GirdSet}">
+    	                <viz.data:dimensions>
+        	                <viz.data:DimensionDefinition name="Company code" value="{Bukrs}" />
+            	            <viz.data:DimensionDefinition name="Fiscal year" value="{Gjahr}" />
+                	    </viz.data:dimensions>
+                    	<viz.data:measures>
+	                        <viz.data:MeasureDefinition name="Asset total" value="{Anln1}" />
+    	                </viz.data:measures>
+        	        </viz.data:FlattenedDataset>
+	            </viz:dataset>
+    	        <!-- Column 차트의 피드 설정 (차트별로 피드가 다르므로 잘 학인 해야함) -->
+            	<viz:feeds>
+                	<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Asset total" />
+                	<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Fiscal year" />
+                	<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Company code" />
+            </viz:feeds>
+            <viz:dependents>
+                <viz:Popover id="idPopOver2"></viz:Popover>
+            </viz:dependents>
+        	</viz:VizFrame>
+    	</HBox>
+        <!-- Line 차트 -->
+		<!-- 차트의 유형, 차트의 제목, 그림자 체도 등 설정 -->
+        <viz:VizFrame id="idVizFrame3" uiConfig="{applicationSet:'fiori'}" height='300px' width="550px" vizType='line'  
+                	  vizProperties="{title: {text: 'Line 차트'}, plotArea: { drawingEffect: 'glossy'} }">
+            <!-- Line 차트의 데이터셋 설정 -->
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/GirdSet}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition name="Company code" value="{Bukrs}" />
+                            <viz.data:DimensionDefinition name="Fiscal year" value="{Gjahr}" />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition name="Asset total" value="{Anln1}" />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+            <!-- Line 차트의 피드 설정 (차트별로 피드가 다르므로 잘 학인 해야함) -->
+            <viz:feeds>
+                <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Asset total" />
+                <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Fiscal year" />
+                <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Company code" />
+            </viz:feeds>
+            <viz:dependents>
+                <viz:Popover id="idPopOver3"></viz:Popover>
+            </viz:dependents>
+        </viz:VizFrame>
+	</VBox>
+
+</mvc:View>

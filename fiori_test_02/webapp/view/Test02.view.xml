@@ -1,0 +1,111 @@
+<mvc:View controllerName="sync5.cl5.fioritest02.controller.Test02"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <!-- ** 3번 문제 **  -->
+    <VBox >
+        <Label text="3번 문제" design="Bold" />
+    <!-- controller.js에서 msg.properties 데이터를 불러오는 과정 가져올 데이터의 setModel이름, JSONModel 데이터의 이름을 작성 -->
+    <!-- controller.js 에서 데이터를 불러오는 과정, 가져올 데이터의 setModel이름, JSONModel 데이터의 이름을 작성 -->
+        <Text text="{In1>/text}" width="{RSM>width}" textAlign="{In1>/textAlign}" />
+        <Label text="{In2>/text}" design="{RSM>design}" />
+    <!-- ** 4번 문제 ** -->
+        <Label text="4번 문제" design="Bold" />
+        <Input value="{RSM>value}" width="{RSM>width2}" description="{RSM>des}" />
+    </VBox>
+    
+    <!-- ** 5번 문제 **  -->
+    <VBox >
+        <Label text="5번 문제" design="Bold" />
+        <!-- jsh18.json에서 불러오는 데이터를 불러오는 과정 -->
+        <Button text="{/data5_1/text}" width="{/data5_1/width}" icon="{/data5_1/icon}" />
+        <Button text="{/data5_2/text}" width="{/data5_2/width}" enabled="{/data2_1/enable}" />
+    </VBox>
+
+    <!-- ** 6번 문제 ** -->
+    <VBox>
+        <Label text="6번 문제" design="Bold" />
+        <!-- jsh18.json에서 불러오는 데이터를 불러오는 과정 -->
+        <Input value="{/data6_1/value}" description="{/data6_1/des}" maxLength="{/data6_1/maxLength}" width="{/data6_1/width}" showClearIcon="{/data6_1/show}"  />
+        <Input description="{/data6_2/des}" width="{/data6_1/des}" maxLength="{/data6_1/maxLength}" />
+    </VBox>
+
+    <!-- ** 7번 문제 **  -->
+    <VBox>
+        <Label text="7번 문제" design="Bold" />
+        <HBox >
+            <Label text="밑변" />
+            <Input id="width" />
+        </HBox>
+        <HBox >
+            <Label text="높이" />
+            <Input id="height" />
+        </HBox>
+        <HBox >
+            <Label text="면적" />
+            <!-- editable는 편집이 불가능하게 하는 기능이다 -->
+            <Input id="area" editable="false" />
+        </HBox>
+        <!-- press를 누르면 해당 함수가 실행 -->
+        <Button text="계산" press="Calc_Triangle" />
+    </VBox>
+
+    <!-- ** 8번 문제 ** -->
+    <HBox >
+
+        <VBox>
+            <Label text="8번 문제" design="Bold" />
+            <HBox >
+                <Label text="원 가격" />
+                <Input id="Origin_Price" />
+            </HBox>
+            <HBox >
+                <Label text="할인된 가격" />
+                <Input id="Sale_Price" />
+            </HBox>
+            <HBox >
+                <Label text="할인율" />
+                <!-- editable는 편집이 불가능하게 하는 기능이다 -->
+                <Input id="Percent" editable="false" description="%" />
+            </HBox>
+            <!-- press를 누르면 해당 함수가 실행 -->
+            <Button text="계산" press="Calc_Price" />
+        </VBox>
+    <!-- 9번 문제 -->
+        <VBox>
+            <Label text="9번 문제" design="Bold" />
+            <HBox >
+                <Label text="Country" />
+                <Input id="City" />
+            </HBox>
+            <!-- press를 누르면 해당 함수가 실행 -->
+            <Button text="Country 체크" press="Check_Country" />
+        </VBox>
+
+        <!-- 10번 문제  -->
+        <VBox>
+            <Label text="10번 문제" design="Bold" />
+        <!-- press를 누르면 해당 함수가 실행 -->
+            <HBox >
+                <Button text="for 구문" press="gugu_for" />
+                <Button text="while 구문" press="gugu_while" />
+                <Button text="for + while 구문" press="gugu_for_while" />
+            </HBox>
+            </VBox>
+        <!-- 11번 문제 -->
+        <VBox >
+            <Label text="11번 문제" design="Bold" />
+            <HBox >
+                <Label text="단 입력" />
+                <Input id="dan" />
+            </HBox>
+        <!-- press를 누르면 해당 함수가 실행 -->
+            <Button text="구구단 출력" press="gugu_skip" />
+        </VBox>
+
+        <!-- 12번 문제 -->
+            <Label text="12번 문제" design="Bold" />
+        <!-- press를 누르면 해당 함수가 실행 -->
+        <Button text="짝수 구구단 출력" press="gugu_2" />
+</HBox>
+</mvc:View>

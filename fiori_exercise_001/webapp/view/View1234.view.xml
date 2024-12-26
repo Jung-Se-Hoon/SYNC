@@ -1,0 +1,7 @@
+<mvc:View controllerName="fioriexercise001.controller.View1234"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View>

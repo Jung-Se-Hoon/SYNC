@@ -1,0 +1,23 @@
+<mvc:View controllerName="sync5.cl5.fioritest01.controller.Test01"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <!-- ** 1번 문제 **  -->
+
+    <!-- VBox는 속성들을 세로로 배치를 한다 -->
+    <VBox>
+        <Label text="1번문제" design="Bold" />
+            <!-- controller.js 에서 데이터를 불러오는 과정, 가져올 데이터의 setModel이름, JSONModel 데이터의 이름을 작성 -->
+            <Input value="{Fi1>/Input1/value}" description="{Fi1>/Input1/des}" width="{Fi1>/Input1/width}" />   
+            <Input value="{Fi2>/Input2/value}" description="{Fi2>/Input2/des}" width="{Fi2>/Input2/width}" />
+            <Label text="{Label>/Input3/text}" />
+    </VBox>
+
+    <!-- ** 2번 문제 **  -->
+
+    <!-- fiori_text.properties 에서 데이터를 controller.js에서 불러오는 과정  -->
+    <VBox>
+        <Label text="2번문제" design="Bold" />
+        <Label text="{LabelText}" />
+    </VBox>
+</mvc:View>

@@ -1,0 +1,62 @@
+<mvc:View controllerName="sync5.cl5.fioritest03.controller.Test03"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core" > 
+    <!-- ui.table을 사용하기 위해 사용하는 여러가지 네임스페이스들 -->
+    
+    <!-- 13번 문제 -->
+    <VBox >
+        <Label text="13번 문제" design="Bold" />
+        <Button text="야구단 출력" press="Baseball" />
+        <Label text="14번 문제" design="Bold" />
+    </VBox>
+    <!-- 14번 문제 -->
+    <!-- sample에서 Gird Table Basic코드에서 가져온다음 데이터 값만 바꿔준다. 데이터는 ball/Base.json에서 가져온다  -->
+    <t:Table
+            rows="{/TeamSet}"
+            selectionMode="MultiToggle"
+            selectionBehavior="Row"
+            paste="onPaste"
+            ariaLabelledBy="title">
+            <t:extension>
+                <OverflowToolbar style="Clear">
+                    <Title id="title" text="BaseBall Team"/>
+                </OverflowToolbar>
+            </t:extension>
+            <t:columns>
+                <t:Column width="11rem">
+                    <Label text="팀명" />
+                    <t:template>
+                        <Text text="{Team}" wrapping="false" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+            <t:columns>
+                <t:Column width="11rem">
+                    <Label text="창단연도" />
+                    <t:template>
+                        <Text text="{Year}" wrapping="false" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+            <t:columns>
+                <t:Column width="11rem">
+                    <Label text="연고지" />
+                    <t:template>
+                        <Text text="{Area}" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+            <t:columns>
+                <t:Column width="11rem">
+                    <Label text="우승횟수" />
+                    <t:template>
+                        <Text text="{Win}" wrapping="false" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+
+</mvc:View>
